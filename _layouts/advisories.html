@@ -7,6 +7,53 @@
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
     {% include meta.html %}
     {% include head.html %}
+
+    <style>
+table {
+  font-family:Arial, Helvetica, sans-serif;
+	color:#666;
+	font-size:12px;
+ 	margin:20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  padding: 5px;
+  box-shadow: 1px 1px 1px #999;
+}
+table td {
+	padding:18px;
+}
+.odd {
+  background:#C5C3C3;
+}
+.even  {
+	background: #BCBCBC;
+}
+li {
+	font-family: 'Lato', sans-serif;
+    float: middle;
+}
+
+tr a {
+	font-family: 'Lato', sans-serif;
+    display: inline-block;
+    color: black;
+    font-size:1.5em;
+    font: weight 100;;
+    text-align: center;
+    padding: 0px 35px;
+    text-decoration: none;
+}
+tr td:hover {
+
+  background-color: #969696;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.3s;
+}
+    </style>
 	</head>
 	<body>
 		<div class="demo-1">
@@ -20,14 +67,13 @@
                       <a class="fadein" href="{{ site.baseurl }}/about">About</a>
                       <a class="fadein" href="{{ site.baseurl }}/archives">Archives</a>
                       <a class="fadein" href="{{ site.baseurl }}/projects">Projects</a>
-
                     
            </header>
                 </div>
               </div>
           <div class="fadein">
-          <h1 class="main-title">sxcurity.<span class="thin">pro</span></h1>
-          <p class="site-description">{{ site.description }}</p>
+          <h1 class="main-title">advisories<span class="thin"></span></h1>
+          <p class="site-description">&amp; HOF entries</p>
            </div>
 					<canvas id="particle-canvas"></canvas>
 				</div>

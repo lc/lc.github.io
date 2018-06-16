@@ -19,8 +19,17 @@ html {
 
 body {
   background: $white;
-  font: 18px/1.4 $helvetica;
+  font: 18px/1.4 $helveticaNeue;
   color: $darkGray;
+}
+body img {
+  -webkit-filter: drop-shadow(2px 2px 2px #D7D6D6);
+  filter: drop-shadow(2px 2px 2px #D7D6D6);
+}
+
+.about {
+  font-family:'Open Sans';
+  line-height:1.5em;
 }
 
 .container {
@@ -69,6 +78,7 @@ h4 {
 
 p {
   margin: 15px 0;
+//  text-indent:5%;
 }
 
 a {
@@ -204,6 +214,7 @@ img {
 .site-description {
   margin: -5px 0 0 0;
   color: $white;
+  line-height:1.5em ;
   font-size: 16px;
 
   @include mobile {
@@ -211,11 +222,11 @@ img {
   }
 }
 
-nav {
-  float: right;
-  margin-top: 23px; 
+.ayy {
+  text-align:center;
+  margin-top: 3%; 
   font-family: $helveticaNeue;
-  font-size: 18px;
+  font-size: 1.5em;
 
   @include mobile {
     float: none;
@@ -287,6 +298,13 @@ footer {
   padding: 20px 0;
   text-align: center;
 }
-
+#highlighter{
+  color:#DE5C74;
+  text-shadow:.5px .5px #C85268;
+}
+#highlighter2{
+  color:#3F83DC;
+  text-shadow:.5px .5px #2C6FC6;
+}
 @import "highlights";
 @import "jekyll-mono";

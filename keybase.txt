@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/sxcurity
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://sxcurity.pro
+  * I am sxcurity (https://keybase.io/sxcurity) on keybase.
+  * I have a public key ASC7qs6WsVvnURD9UCEZ8W4XCTVGZxoJbYq-wavOu9xQOAo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120bbaace96b15be75110fd502119f16e17093546671a096d8abec1abcebbdc50380a",
+            "host": "keybase.io",
+            "kid": "0120bbaace96b15be75110fd502119f16e17093546671a096d8abec1abcebbdc50380a",
+            "uid": "76f484881ca14a586fe7d9bdc7e1c719",
+            "username": "sxcurity"
+        },
+        "service": {
+            "hostname": "sxcurity.pro",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.22"
+    },
+    "ctime": 1494475219,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1494475180,
+        "hash": "5f2f269996a3a336f8bb07d0f91a8b1093a2828ddb0b5c8acf88af618ad5e2bd701f56c6518cec5c943e779ffbdbb24e4a0721a1ba82385a4db5b0cc65500ede",
+        "seqno": 1063177
+    },
+    "prev": "504a98a92a827ef447f2b157be30304516db2696dc3838ae85b067d782b65a8a",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgu6rOlrFb51EQ/VAhGfFuFwk1RmcaCW2KvsGrzrvcUDgKp3BheWxvYWTFAvR7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYmJhYWNlOTZiMTViZTc1MTEwZmQ1MDIxMTlmMTZlMTcwOTM1NDY2NzFhMDk2ZDhhYmVjMWFiY2ViYmRjNTAzODBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYmJhYWNlOTZiMTViZTc1MTEwZmQ1MDIxMTlmMTZlMTcwOTM1NDY2NzFhMDk2ZDhhYmVjMWFiY2ViYmRjNTAzODBhIiwidWlkIjoiNzZmNDg0ODgxY2ExNGE1ODZmZTdkOWJkYzdlMWM3MTkiLCJ1c2VybmFtZSI6InN4Y3VyaXR5In0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJzeGN1cml0eS5wcm8iLCJwcm90b2NvbCI6Imh0dHA6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjIyIn0sImN0aW1lIjoxNDk0NDc1MjE5LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0OTQ0NzUxODAsImhhc2giOiI1ZjJmMjY5OTk2YTNhMzM2ZjhiYjA3ZDBmOTFhOGIxMDkzYTI4MjhkZGIwYjVjOGFjZjg4YWY2MThhZDVlMmJkNzAxZjU2YzY1MThjZWM1Yzk0M2U3NzlmZmJkYmIyNGU0YTA3MjFhMWJhODIzODVhNGRiNWIwY2M2NTUwMGVkZSIsInNlcW5vIjoxMDYzMTc3fSwicHJldiI6IjUwNGE5OGE5MmE4MjdlZjQ0N2YyYjE1N2JlMzAzMDQ1MTZkYjI2OTZkYzM4MzhhZTg1YjA2N2Q3ODJiNjVhOGEiLCJzZXFubyI6OCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxECVmzQQKKOzDE3t3rwtUoaSyRKizWfWvbJKmSn+nt4vBR1StMjRIuuggAJlyhrF5Hx3OT0x02omu7vRZVup63UBqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgP8/Ns1twtzfQr2RBPYywJ0nb9EEp7SKZ0VRy2v9+/W+jdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sxcurity
+
+==================================================================

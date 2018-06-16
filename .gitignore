@@ -8,3 +8,12 @@ Gemfile
 Gemfile.lock
 node_modules
 package.json
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+

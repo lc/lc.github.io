@@ -4,6 +4,7 @@
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
     {% include meta.html %}
+    {% include head.html %}
 
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -13,12 +14,11 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
   </head>
 
   <body>
     
-    
+  <!---
     <div class="intro-header">    
       <div class="container">
         <div class="post-heading">
@@ -31,7 +31,32 @@
             
       </div>
     </div>
-    
+  -->
+
+  <div class="demo-1">
+			<div class="content">
+				<div id="large-header" class="large-header">
+            <div class="wrapper-masthead">
+                <div class="container">
+            <header class="masthead clearfix ayy">
+                    
+                <a class="fadein" href="{{ site.baseurl }}/">Home</a>
+                <a class="fadein" href="{{ site.baseurl }}/about">About</a>
+                <a class="fadein" href="{{ site.baseurl }}/archives">Archives</a>
+                <a class="fadein" href="{{ site.baseurl }}/projects">Projects</a>
+                    
+           </header>
+    </div>
+    </div>
+      <div class="fadein">
+          <h1 class="cdl-title">{{page.title}}</h1><br>
+          <p class="page-author"> Posted by <a href="{{ site.baseurl }}/about"> {{page.author}}
+          </a> on {{ page.date | date: "%B %e, %Y" }}</p>
+      </div>
+      <canvas id="particle-canvas"></canvas>
+      </div>
+      </div>
+      </div>
 
     <div id="main" role="main" class="container">
       {{ content }}
@@ -46,7 +71,10 @@
         </footer>
       </div>
     </div>
-
+		<script src="/js/TweenLite.min.js"></script>
+		<script src="/js/EasePack.min.js"></script>
+		<script src="/js/rAF.js"></script>
+    <script src="/js/particles.js"></script>
 
     {% include analytics.html %}
   </body>
