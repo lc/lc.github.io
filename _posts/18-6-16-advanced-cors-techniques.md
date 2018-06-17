@@ -249,6 +249,10 @@ So if we open Safari and visit `http://x.xxe.sh{.<your-domain>/cors-poc`, we wil
 
 ![Special](/images/cors-special1.png "result")
 
+*Edit:* It was brought to my attention that the `_` character (in subdomains) is not only supported in Safari, but also in Chrome and Firefox! 
+<br>Therefore `http://x.xxe.sh_.<your-domain>/cors-poc` would send valid origin from the most common browsers! Thanks <a class="link" href="https://twitter.com/1lastBr3ath"  target="_blank" rel="noopener noreferrer">Prakash</a>, you rock!
+
+
 ## Practical Testing
 With these special characters now in mind, figuring out which Origins are reflected in the _Access-Control-Allow-Origin_ header can be a tedious, time-consuming task:
 <br><br>
