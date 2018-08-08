@@ -3,7 +3,7 @@
 #
 
 # Name of your site (displayed in the header)
-name: sxcurity.pro
+name: blog.lynxsecurity.io
 
 # Short bio or description (displayed in the header)
 description: Information Security Blog 
@@ -14,11 +14,11 @@ description: Information Security Blog
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  twitter: sxcurity
+  twitter: hacker_
   email: corben@sxcurity.pro
   facebook:
   flickr:
-  github: sxcurity
+  github: C0RB3N
   instagram:
   linkedin: corben-leo
   pinterest:
@@ -37,7 +37,7 @@ google_analytics: UA-111362417-1
 
 # Your website URL (e.g. http://akshayagarwal007.github.io)
 # Used for Sitemap.xml and your RSS feed
-url: https://www.sxcurity.pro
+url: https://blog.lynxsecurity.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)

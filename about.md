@@ -9,7 +9,7 @@ I'm Corben Leo, a security analyst and bug bounty hunter. I currently have <font
 </div>
 
 ## Advisories
-<a href="/advisories" class="link">http://www.sxcurity.pro/advisories</a>
+<a href="/advisories" class="link">Advisories</a>
 
 ## Contact me
 
