@@ -6,7 +6,7 @@ author: Corben Leo
 ### &#128187;&nbsp;Introduction:
 This is a write-up of an SSRF I accidentally found in HackerTarget and leveraged to get access to internal services! Please **note** that they **don't** have an active bug bounty program.<br>
 <h4>&#129300; What is HackerTarget?</h4>
-<a href="https://hackertarget.com" style="color:#E11D1D">HackerTarget</a> is a service that provides access to online vulnerability scanners and tools used by many security professionals and "makes securing your systems easier". They also are the creators of <a href="https://dnsdumpster.com/" style="color:#E11D1D">DNSDumpster</a>, which is utilized in several recon tools.
+<a href="https://hackertarget.com" class="link">HackerTarget</a> is a service that provides access to online vulnerability scanners and tools used by many security professionals and "makes securing your systems easier". They also are the creators of <a href="https://dnsdumpster.com/" class="link">DNSDumpster</a>, which is utilized in several recon tools.
 <br><br>
 <h4>&#128565; SSRF:</h4>
 *Server-Side Request Forgery* (SSRF) is a vulnerability in which an attacker can send a controlled, crafted request via a vulnerable application. We can communicate with different services running on different protocols by utilizing URI schemes such as dict://, gopher://, ftp://, and many more. Getting a server to make a request isn't a vulnerability in itself, but becomes one when you can make requests to things you wouldn't or shouldn't normally have access to such as internal networks or internal services.
