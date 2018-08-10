@@ -9,8 +9,8 @@ This is a write-up of an SSRF I accidentally found in HackerTarget and leveraged
 <a href="https://hackertarget.com" class="link">HackerTarget</a> is a service that provides access to online vulnerability scanners and tools used by many security professionals and "makes securing your systems easier". They also are the creators of <a href="https://dnsdumpster.com/" class="link">DNSDumpster</a>, which is utilized in several recon tools.
 <br><br>
 <h4>&#128565; SSRF:</h4>
-*Server-Side Request Forgery* (SSRF) is a vulnerability in which an attacker can send a controlled, crafted request via a vulnerable application. We can communicate with different services running on different protocols by utilizing URI schemes such as dict://, gopher://, ftp://, and many more. Getting a server to make a request isn't a vulnerability in itself, but becomes one when you can make requests to things you wouldn't or shouldn't normally have access to such as internal networks or internal services.
-<br><br>
+Server-Side Request Forgery (SSRF) is a vulnerability in which an attacker can send a controlled, crafted request via a vulnerable application. We can communicate with different services running on different protocols by utilizing URI schemes such as `gopher://`,`dict://`, `ftp://`, etc. Getting a server to issue a request **is not** a vulnerability in itself, but it 
+ becomes one when you can make requests to things you wouldn’t or shouldn’t normally have access to, such as internal networks or internal services.<br><br>
 ### &#128270;&nbsp;Finding the vulnerability:
 I was using DNSDumpster for recon during a bug hunting session, and I noticed there was a button of a globe similar to &#127758; that said "Get HTTP Headers":
 <br>
