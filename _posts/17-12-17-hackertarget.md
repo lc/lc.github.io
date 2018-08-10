@@ -80,12 +80,12 @@ I knew I would be able to hit the service with this SSRF, but I wasn't positive 
 I tried using <font id="highlighter2">dict://</font> right away and was able to get the libcurl version, but that wasn't very helpful. Next, I created a PHP file on my server to initiate a redirect to another port with the <font id="highlighter2">gopher://</font> wrapper:<br>
 ```php
 <?php
-header("Location: gopher://hack3r.site:1337/_SSRF%0ATest!");
+header("Location: gopher://<server>:1337/_SSRF%0ATest!");
 ?>
 ```
 <br>
 In a nutshell, the gopher:// protocol sends 1 character, a new line (CR+LF), and the remaining data, which allows us to send a **multiline request**. <br><br>
-I started netcat and checked the API again: `https://api.hackertarget.com/httpheaders/?q=http://C0RB3N.pro/redirect.php`. It followed the redirect  and I received a multiline request on port 1337!
+I started netcat and checked the API again: `https://api.hackertarget.com/httpheaders/?q=http://<server>/redirect.php`. It followed the redirect  and I received a multiline request on port 1337!
 <br><br>This means I could send valid commands to the internal SMTP server!
 
 ### &#127881;&nbsp;The Finale
