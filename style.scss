@@ -213,7 +213,7 @@ img {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $white;
+  color: #b2b2b2;
   line-height:1.5em ;
   font-size: 16px;
 
@@ -227,6 +227,7 @@ img {
   margin-top: 3%; 
   font-family: $helveticaNeue;
   font-size: 1.5em;
+  color: #8d7719;
 
   @include mobile {
     float: none;

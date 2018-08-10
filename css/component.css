@@ -10,13 +10,14 @@
 }
 
 .demo-1 .large-header {
-	background-image: url('../images/spacee.jpg');
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/architecture-2564897.jpg');
+	background-size:cover;
 }
 .main-title {
 	position: absolute;
 	margin: 0;
 	padding: 0;
-	color: #f9f1e9;
+	color: #d0d0d0;
 	text-align: center;
 	top: 50%;
 	left: 50%;
