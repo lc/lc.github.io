@@ -108,7 +108,7 @@ I created another PHP file on my server that would redirect the API to the inter
 ?>
 ```
 <br><br>
-I changed the query one last time: `https://api.hackertarget.com/httpheaders/?q=http://C0RB3N.pro/smtp.php`
+I changed the query one last time: `https://api.hackertarget.com/httpheaders/?q=http://<server>/smtp.php`
 <br><br>
 I went to my email, reloaded it once.
 <br><br>
