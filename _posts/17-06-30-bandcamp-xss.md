@@ -3,7 +3,7 @@ layout: post
 title: "Stored XSS in BandCamp"
 author: Corben Leo
 ---
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recently, while my friend <a href="https://twitter.com/_psycho_mantis" rel="noopener noreferrer" style="color:#DC0739;text-decoration:none;"><b>Alyssa Herrera</b></a> and I were collaborating on finding ffmpeg vulnerabilities in bug bounty programs, we came to learn that **Bandcamp** ran a bug bounty program. If you have never heard of BandCamp, it is essentially a platform that allows artists, fans, and labels to interact, connect, and support each other.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recently, while my friend <a href="https://twitter.com/Alyssa_Herrera_" rel="noopener noreferrer" style="color:#DC0739;text-decoration:none;"><b>Alyssa Herrera</b></a> and I were collaborating on finding ffmpeg vulnerabilities in bug bounty programs, we came to learn that **Bandcamp** ran a bug bounty program. If you have never heard of BandCamp, it is essentially a platform that allows artists, fans, and labels to interact, connect, and support each other.
 
 I instantly was curious to see what I could find, so I signed up for an artist account and created a Bandcamp page. The first function I started to test was the **Add Music** function. This part of the site allows artists to add albums and tracks. I tested for IDOR and XSS, but sadly it wasn't vulnerable to either.
 
