@@ -4,15 +4,15 @@ layout: default
 
 <div class="posts">
   {% for post in site.posts limit:10 %}
-    <article class="post">
+  <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+    <h1 class="postTitle"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-      <div class="entry">
-        {{ post.excerpt | truncatewords: 35 }}
-      </div>
+    <div class="entry">
+      {{ post.excerpt | truncatewords: 35 }}
+    </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="button button-primary">Read More</a>
-    </article>
+    <a href="{{ site.baseurl }}{{ post.url }}" class="button button-primary">Read More</a>
+  </article>
   {% endfor %}
 </div>

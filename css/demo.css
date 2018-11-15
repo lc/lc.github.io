@@ -1,4 +1,6 @@
 @font-face {
+	font-family: 'Inconsolata';
+	src:url('/fonts/Inconsolata.otf')  format('opentype');
 }
 
 *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -6,12 +8,15 @@
 .clearfix:after { clear: both; }
 
 body {
-	background: #fff;
+	background: rgb(245,245,245);
 	color: #383a3c;
 	font-weight: 400;
 	font-size: 1em;
 	line-height: 1.25;
 	font-family: 'Raleway', Calibri, Arial, sans-serif;
+}
+.entry {
+	font-family: 'Inconsolata';
 }
 
 a, button {

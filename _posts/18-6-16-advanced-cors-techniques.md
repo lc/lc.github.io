@@ -4,7 +4,7 @@ title: "Advanced CORS Exploitation Techniques"
 author: Corben Leo
 ---
 
-### <font>Preface</font>
+### <font>preface:</font>
 I've seen some fantastic research done by <a class="link" target='_blank' rel='noopener noreferrer' href='https://twitter.com/_zulln?lang=en'>Linus Särud</a> and by <a class="link" target='_blank' rel='noopener noreferrer' href='https://twitter.com/i_bo0om'>Bo0oM</a> on how Safari's handling of special characters could be abused. 
 
 - <a target='_blank' rel='noopener noreferrer' href='https://labs.detectify.com/2018/04/04/host-headers-safari/'>https://labs.detectify.com/2018/04/04/host-headers-safari/</a>
@@ -15,7 +15,7 @@ Both articles dive into practical scenarios where Safari's behavior can lead to 
 
 <br>
 
-### Introduction:
+### introduction:
 
 Last November, I <a href="/tricky-CORS/" class="link" target="_blank" rel="noopener noreferrer">wrote</a> about a tricky cross-origin resource sharing bypass in Yahoo View that abused Safari's handling of special characters. Since then, I've found more bugs using clever bypasses and decided to present more advanced techniques to be used.
 
@@ -27,7 +27,7 @@ This assumes you have a basic understanding of what CORS is and how to exploit m
 - <a class="link" href="https://www.geekboy.ninja/blog/exploiting-misconfigured-cors-cross-origin-resource-sharing/"  target="_blank" rel="noopener noreferrer">Geekboy's post</a>
 
 <br>
-### Background: DNS & Browsers:
+### background: dns & browsers:
 
 **<u>Quick Summary:</u>**
 - The <font class="link">Domain Name System</font> is essentially an address book for servers. It translates/maps hostnames to IP addresses, making the internet easier to use.
@@ -50,7 +50,7 @@ dig A "<@$&(#+_\`^%~>.withgoogle.com" @1.1.1.1 | grep -A 1 "ANSWER SECTION"
 So we know DNS servers respond to these requests, but how do browsers handle them? 
 _Answer:_ <b>Most</b> browsers validate domain names before making any requests. 
 
-### Examples:
+### examples:
 **Chrome:**
 
 ![chrome](/images/browser-response/chrome.png "result")
@@ -76,12 +76,11 @@ We can use all sorts of different characters, even unprintable ones:
 %01-08,%0b,%0c,%0e,%0f,%10-%1f,%7f
 ```
 <br>
-### Jumping into CORS Configurations
+### jumping into cors configurations:
 Most CORS integrations contain a whitelist of origins that are permitted to read information from an endpoint. This is usually done by using regular expressions.
 
 
-<u><strong><special>Example #1:</special></strong></u><br>
-
+**Example #1:**
 ```bash
 ^https?:\/\/(.*\.)?xxe\.sh$
 ```
@@ -90,7 +89,7 @@ Most CORS integrations contain a whitelist of origins that are permitted to read
 
 The only way an attacker would be able to steal data from this endpoint, is if they had either an XSS or subdomain takeover on `http(s)://xxe.sh` / `http(s)://*.xxe.sh`.
 
-<u><strong><special>Example #2:</special></strong></u><br>
+**Example #2:**
 ```bash
 ^https?:\/\/.*\.?xxe\.sh$
 ```
@@ -117,7 +116,7 @@ This is a pretty common bypass technique – here's a real example of it:<br>
 <a class="link" target='_blank' rel='noopener noreferrer' href='https://hackerone.com/reports/168574'>https://hackerone.com/reports/168574</a> by <a class="link" target='_blank' rel='noopener noreferrer' href='https://twitter.com/albinowax'>James Kettle</a> 
 
 <br>
-<u><strong><special>Example #3:</special></strong></u><br>
+**Example #3:**
 ```bash
 ^https?:\/\/(.*\.)?xxe\.sh\:?.*
 ```
@@ -139,7 +138,7 @@ Just like in the second example, the `?` quantifier only affects the `:` charact
 ![Example3](/images/cors-example3.png "result")
 
 <br>
-## The Million Dollar Question:
+### the million dollar question:
 > How does Safari's handling of special characters come into play when exploiting CORS Misconfigurations?
 
 Take the following Apache configuration for example:
@@ -175,7 +174,7 @@ Since the regex matches against alphanumeric ASCII characters and `. -`, special
 <br>
 Such a domain would be supported in a modern, common browser: <special>Safari</special>.
 
-### Exploitation:
+## exploitation:
 
 **Pre-Requisites:**
 - A domain with a wildcard DNS record pointing it to your box.
@@ -183,7 +182,7 @@ Such a domain would be supported in a modern, common browser: <special>Safari</s
 
 Like most browsers, Apache and Nginx (right out of the box) also don't like these special characters, so it's much easier to serve HTML and Javascript with NodeJS.
 
-[+] <special>serve.js</special>
+&#10007; <special>serve.js</special>
 ```javascript
 var http = require('http');
 var url  = require('url');
@@ -209,7 +208,7 @@ console.log(`Serving on port ${port}`);
 
 In the same directory, save the following:
 
-[+] <special>cors.html</special>
+&#10007; <special>cors.html</special>
 ```html
 <!DOCTYPE html>
 <html>
@@ -253,17 +252,17 @@ So if we open Safari and visit `http://x.xxe.sh{.<your-domain>/cors-poc`, we wil
 <br>Therefore `http://x.xxe.sh_.<your-domain>/cors-poc` would send valid origin from the most common browsers! Thanks <a class="link" href="https://twitter.com/1lastBr3ath"  target="_blank" rel="noopener noreferrer">Prakash</a>, you rock!
 
 
-## Practical Testing
+## practical testing
 With these special characters now in mind, figuring out which Origins are reflected in the _Access-Control-Allow-Origin_ header can be a tedious, time-consuming task:
 <br><br>
 
 ![Meme](/images/fuzz-meme.jpeg "Fuzz Meme")
 
-#### Introducing TheftFuzzer:
+### theftfuzzer:
 To save time and to become more efficient, I decided to code a tool to fuzz CORS configurations for allowed origins. It's written in Python and it generates a bunch of different permutations for possible CORS bypasses. It can be found on my Github <a class="link" target='_blank' rel='noopener noreferrer' href='https://github.com/C0RB3N/theftfuzzer'>here</a>. If you have any ideas for improvements to the tool, feel free to ping me or make a pull request!
 <br><br>
 
-## Outro
+## outro
 I hope this post has been informative and that you've learned from it! Go exploit those CORS configurations and earn some bounties &#128541;
 
 <br>Happy Hunting!<br>

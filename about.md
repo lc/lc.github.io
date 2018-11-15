@@ -8,10 +8,10 @@ permalink: /about/
 I'm Corben Leo, a security analyst and bug bounty hunter. I currently have <font id="highlighter">11</font> CVE ID's assigned to my findings. I founded <a class="link" target='_blank' rel='noopener noreferrer' href='http://lynxsecurity.io'>Lynx Security</a>, a security project devoted to making the web a more secure place.
 </div>
 
-## Advisories
+## advisories:
 <a href="/advisories" class="link">Advisories</a>
 
-## Contact me
+## contact:
 
 - <a class="link contact" href="https://twitter.com/hacker_" _target="blank" rel="noopener noreferrer">Twitter</a>
 - <a class="link contact" href="mail-to:corben@sxcurity.pro">corben[at]sxcurity.pro</a>

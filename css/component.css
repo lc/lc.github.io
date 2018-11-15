@@ -10,14 +10,15 @@
 }
 
 .demo-1 .large-header {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/miamicdl.jpg');
-	background-size:cover;
+	background: rgb(245,245,245);  /* fallback for old browsers */
+
+
 }
 .main-title {
 	position: absolute;
 	margin: 0;
 	padding: 0;
-	color: #d0d0d0;
+	color: black;
 	text-align: center;
 	top: 50%;
 	left: 50%;

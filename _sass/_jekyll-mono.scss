@@ -1,11 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro|Open+Sans|Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans|Comfortaa');
 h3 {
 	font-family:'Comfortaa';
-	color: #b69a25;
+	color: #4E4D4D;
+	text-shadow: 2px 2px #ECECED;
+}
+h2 {
+	font-family:'Comfortaa';
+	color: #4E4D4D;
 	text-shadow: 2px 2px #ECECED;
 }
 .proj {
-	color:#4BA040;	
+	color:#4BA040;
 }
 .proj:hover {
 	color:#3F8436;
@@ -14,9 +19,10 @@ h3 {
 	position: absolute;
 	margin: 0;
 	padding: 0;
-	color: #f9f1e9;
+	color: rgb(59,59,59);
+	text-shadow: 1px 1px rgb(94, 94, 94);
 	text-align: center;
-	width:75%;
+	width:50%;
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate3d(-50%,-50%,0);
@@ -24,11 +30,10 @@ h3 {
 	font-size:3em;
 }
 .page-author {
-	text-decoration: underline;
 	position: absolute;
 	margin: 0;
 	padding: 0;
-	color: #D5D4D2;
+	color:rgb(59,59,59);
 	text-align:center;
 	top: 70%;
 	left: 50%;
@@ -36,7 +41,8 @@ h3 {
 	transform: translate3d(-50%,-50%,0);
 }
 .page-author a {
-	color:#D5D4D2;
+	color:rgb(59,59,59);
+	text-decoration:underline;
 }
 .contact {
 	line-height: 1.5em;
@@ -83,8 +89,12 @@ h3 {
   }
 .ayy a {
 	font-family:'Raleway';
+	color:black;
 	text-transform: uppercase;
 	font-weight:800;
+}
+.ayy a:hover {
+	color:rgb(59,59,59);
 }
 /****************************/
    /* JEKYLL-mono-color */
@@ -210,7 +220,7 @@ button.button-primary:focus {
 .site-description {
 	text-transform: uppercase;
 	font-family:'Raleway';
-	color:#E4E4E4;
+	color:rgb(40,40,40);
 	position: absolute;
 	margin: 0;
 	padding: 0;
