@@ -15,20 +15,6 @@ h2 {
 .proj:hover {
 	color:#3F8436;
 }
-.cdl-title {
-	position: absolute;
-	margin: 0;
-	padding: 0;
-	color: rgb(59,59,59);
-	text-shadow: 1px 1px rgb(94, 94, 94);
-	text-align: center;
-	width:60%;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate3d(-50%,-50%,0);
-	transform: translate3d(-50%,-50%,0);
-	font-size:3em;
-}
 .page-author {
 	position: absolute;
 	margin: 0;
@@ -431,4 +417,36 @@ button.button-primary:focus {
     -moz-border-radius: 100px;
     -webkit-border-radius: 100px;
     border-radius: 100px;
+}
+@media only screen and (max-width: 600px) {
+   .cdl-title {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: rgb(59,59,59);
+	text-shadow: 1px 1px rgb(94, 94, 94);
+	text-align: center;
+	width:60%;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+	font-size:2em;
+  }
+}
+@media only screen and (min-width: 600px) {
+	.cdl-title {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: rgb(59,59,59);
+	text-shadow: 1px 1px rgb(94, 94, 94);
+	text-align: center;
+	width:60%;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+	font-size:3em;
+}
 }
