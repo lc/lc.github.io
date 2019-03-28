@@ -4,11 +4,7 @@ title: Projects
 permalink: /projects/
 ---
 
-### <a href="http://lynxsecurity.io" _target="blank" rel="noopener noreferrer" class="proj">Lynx Security</a>
-Lynx Security is a security project devoted to performing white-box and black-box audits in order to accomplish 4 important goals: identify, isolate, assess, and mitigate vulnerabilities. 
 
-
-***
 ### <a href="https://github.com/sxcurity/theftfuzzer" _target="blank" rel="noopener noreferrer" class="proj">TheftFuzzer</a>
 TheftFuzzer is a tool that fuzzes Cross-Origin Resource Sharing implementations for common misconfigurations.
 
