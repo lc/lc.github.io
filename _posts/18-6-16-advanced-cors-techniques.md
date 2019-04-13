@@ -259,7 +259,7 @@ With these special characters now in mind, figuring out which Origins are reflec
 ![Meme](/images/fuzz-meme.jpeg "Fuzz Meme")
 
 ### theftfuzzer:
-To save time and to become more efficient, I decided to code a tool to fuzz CORS configurations for allowed origins. It's written in Python and it generates a bunch of different permutations for possible CORS bypasses. It can be found on my Github <a class="link" target='_blank' rel='noopener noreferrer' href='https://github.com/C0RB3N/theftfuzzer'>here</a>. If you have any ideas for improvements to the tool, feel free to ping me or make a pull request!
+To save time and to become more efficient, I decided to code a tool to fuzz CORS configurations for allowed origins. It's written in Python and it generates a bunch of different permutations for possible CORS bypasses. It can be found on my Github <a class="link" target='_blank' rel='noopener noreferrer' href='https://github.com/lc/theftfuzzer'>here</a>. If you have any ideas for improvements to the tool, feel free to ping me or make a pull request!
 <br><br>
 
 ## outro
@@ -270,4 +270,4 @@ I hope this post has been informative and that you've learned from it! Go exploi
 - <a class="link" href="https://twitter.com/hacker_"  target="_blank" rel="noopener noreferrer">https://twitter.com/hacker_</a>
 - <a class="link" href="https://hackerone.com/cdl" target="_blank" rel="noopener noreferrer">https://hackerone.com/cdl</a>
 - <a class="link" href="https://bugcrowd.com/c" target="_blank" rel="noopener noreferrer">https://bugcrowd.com/c</a>
-- <a class="link" href="https://github.com/C0RB3N"  target="_blank" rel="noopener noreferrer">https://github.com/C0RB3N</a>
+- <a class="link" href="https://github.com/lc"  target="_blank" rel="noopener noreferrer">https://github.com/lc</a>
