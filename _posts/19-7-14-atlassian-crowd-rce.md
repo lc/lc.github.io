@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Analysis of CVE-2019-11580 Atlassian Crowd RCE"
+title: "Analysis of an Atlassian Crowd RCE -  CVE-2019-11580"
 author: Corben Leo
 ---
 
