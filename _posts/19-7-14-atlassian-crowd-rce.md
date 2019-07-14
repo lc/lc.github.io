@@ -250,7 +250,7 @@ We now have a pre-auth remote code execution on Atlassian Crowd!
 
 
 ### &#127881; outro:
-This lead to criticals on a few bug bounty programs - all of the time I spent analyzing this CVE paid off!
+This led to criticals on a few bug bounty programs - all of the time I spent analyzing this CVE paid off!
 
 Here's a big takeaway from this:
 
