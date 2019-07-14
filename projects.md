@@ -5,13 +5,30 @@ permalink: /projects/
 ---
 
 
-### <a href="https://github.com/lc/theftfuzzer" _target="blank" rel="noopener noreferrer" class="proj">TheftFuzzer</a>
+### <a href="https://github.com/lc/secretz" target="_blank" rel="noopener noreferrer" class="proj">secretz</a>
+`secretz` is a tool that minimizes the large attack surface of Travis CI. It automatically fetches repos, builds, and logs for any given organization. Built during and for <a target='_blank' rel='noopener noreferrer' class='link' href='https://edoverflow.com/2019/ci-knew-there-would-be-bugs-here/'>research</a> on TravisCI that I participated in.
+
+***
+
+
+### <a href="https://github.com/lc/brute53" target="_blank" rel="noopener noreferrer" class="proj">brute53</a>
+brute53 is a tool to bruteforce nameservers when working with subdomain delegations to AWS. Based off Frans Rosén's <a target='_blank' rel='noopener noreferrer' class='link' href='https://youtu.be/FXCzdWm2qDg?t=1132'>talk</a> "DNS hijacking using cloud providers - no verification needed".
+
+***
+
+### <a href="https://github.com/lc/bugbountylink" target="_blank" rel="noopener noreferrer" class="proj">bugbounty.link</a>
+<a target='_blank' rel='noopener noreferrer' class='link' href='http://bugbounty.link'>bugbountylink</a> is a URL Shortening service I created. It's useful for creating redirects on the fly when testing for Server-Side Request Forgery.
+
+
+***
+
+### <a href="https://github.com/lc/theftfuzzer" target="_blank" rel="noopener noreferrer" class="proj">TheftFuzzer</a>
 TheftFuzzer is a tool that fuzzes Cross-Origin Resource Sharing implementations for common misconfigurations.
 
 
 ***
 
-### <a href="https://github.com/lc/230-OOB" _target="blank" rel="noopener noreferrer" class="proj">230-OOB</a>
+### <a href="https://github.com/lc/230-OOB" target="_blank" rel="noopener noreferrer" class="proj">230-OOB</a>
 230-OOB is a python script that emulates an FTP server that assists you in achieving file read via Out-of-Band XXE.
 
 
