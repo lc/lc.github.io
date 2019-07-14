@@ -2,6 +2,10 @@
 	font-family: 'Inconsolata';
 	src:url('/fonts/Inconsolata.otf')  format('opentype');
 }
+@font-face {
+  font-family: 'Source Code Pro';
+  src:url('/fonts/SourceCodePro-Regular.otf') format('opentype');
+}
 special {
   font-weight: bold;
   color:darken($h1-color,10%);
@@ -11,12 +15,13 @@ special {
 }
 
 code {
-  font-family:'Inconsolata','Courier', monospace;
-  color: rgb(0, 0, 0);
+  font-family:'Source Code Pro','Inconsolata','Courier', monospace;
+  color: $mono-color;
+  font-size: 15px;
 }
 
 pre {
-  padding: 8px 12px;
+  padding: 4px 6px;
   overflow-x: auto;
 
   > code {
@@ -24,7 +29,7 @@ pre {
     border: 0;
     padding-right: 0;
     padding-left: 0;
-    font-family:'Inconsolata','Courier', monospace;
+    font-family:'Source Code Pro','Inconsolata','Courier', monospace;
     font-size: 15px;
   }
 }
@@ -36,10 +41,7 @@ pre {
   -webkit-border-radius: 3px; 
   border-radius: 3px;
   padding: 20px; 
-  background: #232526;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+  background: #232526;    
   color: #C1C2C3;
 }
 

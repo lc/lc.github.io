@@ -1,25 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans|Comfortaa');
 h3 {
 	font-family:'Comfortaa';
-	color: #4E4D4D;
+	color: $mono-color;
 	text-shadow: 2px 2px #ECECED;
 }
 h2 {
 	font-family:'Comfortaa';
-	color: #4E4D4D;
+	color: $mono-color;
 	text-shadow: 2px 2px #ECECED;
 }
+
 .proj {
-	color:#4BA040;
+	color:$mono-color;
 }
 .proj:hover {
-	color:#3F8436;
+	color: darken($mono-color,10%);
 }
 .page-author {
 	position: absolute;
 	margin: 0;
 	padding: 0;
-	color:rgb(59,59,59);
+	color:#98A0A4;
 	text-align:center;
 	top: 70%;
 	left: 50%;
@@ -75,12 +76,13 @@ h2 {
   }
 .ayy a {
 	font-family:'Raleway';
-	color:black;
+	color:#ECECEC;
 	text-transform: uppercase;
 	font-weight:800;
+	text-shadow: 1px 1px 2px black;
 }
 .ayy a:hover {
-	color:rgb(59,59,59);
+	color:#D1D1D1;
 }
 /****************************/
    /* JEKYLL-mono-color */
@@ -127,7 +129,7 @@ h2 {
  
  .post-heading {
         a {
-         color: $hl-color;
+         color: '$hl-color';
          &:hover{
            color: darken($hl-color,20);
          }
@@ -206,7 +208,7 @@ button.button-primary:focus {
 .site-description {
 	text-transform: uppercase;
 	font-family:'Raleway';
-	color:rgb(40,40,40);
+	color:#98A0A4;
 	position: absolute;
 	margin: 0;
 	padding: 0;
@@ -423,7 +425,7 @@ button.button-primary:focus {
 	position: absolute;
 	margin: 0;
 	padding: 0;
-	color: rgb(59,59,59);
+	color: #D1DCE1;
 	text-shadow: 1px 1px rgb(94, 94, 94);
 	text-align: center;
 	width:60%;
@@ -439,7 +441,7 @@ button.button-primary:focus {
 	position: absolute;
 	margin: 0;
 	padding: 0;
-	color: rgb(59,59,59);
+	color: #D1DCE1;
 	text-shadow: 1px 1px rgb(94, 94, 94);
 	text-align: center;
 	width:60%;

