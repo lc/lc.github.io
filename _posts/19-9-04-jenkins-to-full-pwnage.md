@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Exposed Jenkins instance to RCE on 8 Adobe Experience Managers"
+title: "Exposed Jenkins to RCE on 8 Adobe Experience Managers"
 author: Corben Leo
 ---
 
