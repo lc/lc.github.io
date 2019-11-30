@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 ---
 ### <a href="https://github.com/lc/jenkinz" target="_blank" rel="noopener noreferrer" class="proj">jenkinz</a>
-`jenkinz` is a tool to retrieve every build for every job ever created and run on a given Jenkins instance. This allows an attacker to find secrets within logs. Example: <a target='_blank' rel='noopener noreferrer' class='link' href='https://www.corben.io/jenkins-to-full-pwnage/'>Exposed Jenkins to RCE on 8 Adobe Experience Managers</a>
+`jenkinz` is a tool to retrieve every build for every job ever created and run on a given Jenkins instance. This allows an attacker to find secrets within logs. For example, read this <a target='_blank' rel='noopener noreferrer' class='link' href='https://www.corben.io/jenkins-to-full-pwnage/'>blog post</a>.
 
 
 ### <a href="https://github.com/lc/secretz" target="_blank" rel="noopener noreferrer" class="proj">secretz</a>
