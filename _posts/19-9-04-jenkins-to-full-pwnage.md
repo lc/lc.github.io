@@ -22,7 +22,7 @@ I'm a huge sucker for Continuous Integration applications and I've done some <a 
 
 Just like with Travis-CI, it would be an incredibly tedious task to manually retrieve every build log and environment variable for every job, so I automated all of it. 
 
-### <font>&#127881; jenkinz -&gt; secretz -&gt; rce</font>
+### <font>&#127881; jenkinz -&gt; secrets -&gt; rce</font>
 <a target='_blank' rel='noopener noreferrer' class='link' href='https://github.com/lc/jenkinz'>jenkinz</a> is the the tool that came out of this; it retrieves every build (log and environment variables) for every job ever created and run on a given Jenkins instance and saves them all to an output directory.
 
 After running the tool, I had a large amount of data through. `ripgrep` is great for this - after searching for a few different strings, I found credentials in one of the logs:
