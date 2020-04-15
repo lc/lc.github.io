@@ -94,7 +94,7 @@ Now navigate to https://aem-instance.example.com/rcenode.html
 After navigating to the URL, the `uname -a` command executed.
 
 
-Not only did I have RCE though, I had full privileges and could've deleted or edited all of their main sites, including their subsidaries in AEM:
+Not only did I have RCE though, I had full privileges and could've deleted or edited all of their main sites, including their subsidiaries in AEM:
 
 `http://aem-instance.example.com/editor.html/content/example/example_com/us/en/home/index.html`
 
