@@ -16,6 +16,13 @@
 html {
   font-size: 100%;
 }
+.demo1 {
+  position: absolute;
+  top: 0px;
+  min-height: 500px;
+  z-index: 2;
+  background-image:url("https://lynxsecurity.io/assets/images/header-bg.svg");
+}
 
 body {
   background: $white;

