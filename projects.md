@@ -3,6 +3,9 @@ layout: pg
 title: Projects
 permalink: /projects/
 ---
+### <a href="https://github.com/lc/gau" target="_blank" rel="noopener noreferrer" class="proj">gau</a>
+`gau` is a tool that fetches known URLs from AlienVault's Open Threat Exchange, the Wayback Machine, and Common Crawl for any given domain.
+
 ### <a href="https://github.com/lc/jenkinz" target="_blank" rel="noopener noreferrer" class="proj">jenkinz</a>
 `jenkinz` is a tool to retrieve every build for every job ever created and run on a given Jenkins instance. This allows an attacker to find secrets within logs. For example, read this <a target='_blank' rel='noopener noreferrer' class='link' href='https://www.corben.io/jenkins-to-full-pwnage/'>blog post</a>.
 
